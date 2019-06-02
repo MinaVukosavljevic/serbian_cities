@@ -1,0 +1,54 @@
+.gallery-cities article {
+    padding: 2rem;
+    margin: 0 0 2rem 0;
+    display: grid;
+    grid-template-columns: 50vw 20vw;
+    grid-gap: 30px;
+    grid-template-areas:
+    "h3 weather"
+    "p weather"
+    "gallery gallery";
+    
+
+    h3 {
+        grid-area: h3;
+    }
+
+    .description {
+        grid-area: p;
+    }
+
+    .weather {
+        grid-area: weather;
+        background: rgba(0, 49, 96, 0.4);
+        height: 150px;
+    }
+
+    .gallery-city {
+        grid-area: gallery;
+        display: flex;
+        flex-wrap: wrap;
+
+        img {
+            transition: .6s;
+
+            &:hover {
+                transform: scale(.9);
+                opacity: .9;
+                cursor: pointer;
+            }
+        }
+
+        img.thumb {
+            width: 300px;
+            height: max-content;
+        }
+    }
+}
+
+.gallery-cities {
+    h2 {
+        font-size: 1.8rem;
+        margin: 2rem;
+    }
+}

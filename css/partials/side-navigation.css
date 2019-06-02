@@ -1,0 +1,21 @@
+.sidenav {
+  background: #920000;
+}
+.sidenav ul li a {
+  display: block;
+  padding: 0.5rem 1rem;
+  color: white;
+}
+.sidenav ul li a.current {
+  background: #002c56;
+}
+
+/* Only stick side navbar if it can fit */
+@media (min-height: 300px) {
+  .sidenav .gallery-list {
+    position: sticky;
+    top: 0;
+  }
+}
+
+/*# sourceMappingURL=side-navigation.css.map */

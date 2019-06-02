@@ -1,0 +1,279 @@
+.container {
+  display: grid;
+  grid-template-columns: 15vw 1fr;
+  grid-template-rows: max-content;
+}
+.container .header-main {
+  grid-column: 1/3;
+}
+.container .sidenav {
+  grid-column: 1/2;
+}
+.container main {
+  grid-column: 2/3;
+  padding-bottom: 5em;
+}
+.container footer {
+  grid-column: 1/span 2;
+}
+
+body {
+  font-family: "Mandali", sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Roboto", sans-serif;
+  font-size: 1.4rem;
+  margin: 0.5rem 0;
+  letter-spacing: 0.1rem;
+}
+
+button {
+  cursor: pointer;
+}
+
+p {
+  margin: 0.5rem 0;
+}
+
+h1 span, h2 span {
+  display: block;
+}
+
+.heading-login {
+  margin: 4em 2em;
+}
+.heading-login .heading-login-primary {
+  color: #920000;
+  font-size: 2em;
+  text-transform: uppercase;
+  letter-spacing: 0.5em;
+}
+.heading-login .heading-login-secondary {
+  color: #003160;
+}
+
+.heading-main span {
+  display: block;
+}
+.heading-main .heading-main-primary {
+  font-size: 2em;
+  text-transform: uppercase;
+  letter-spacing: 0.5em;
+}
+
+.header-main {
+  background: #003160;
+  box-shadow: inset 0 8px 0 0 rgba(255, 255, 255, 0.5), inset 0 -8px 0 0 rgba(255, 255, 255, 0.5);
+}
+.header-main nav {
+  align-self: flex-end;
+}
+.header-main .contain {
+  max-width: 70vw;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 1rem;
+  background: rgba(0, 0, 0, 0.1);
+  padding: 3rem 1rem;
+  color: #fff;
+}
+.header-main .welcome .user-name {
+  color: #da0000;
+  text-transform: uppercase;
+  font-size: 18px;
+}
+
+.sidenav {
+  background: #920000;
+}
+.sidenav ul li a {
+  display: block;
+  padding: 0.5rem 1rem;
+  color: white;
+}
+.sidenav ul li a.current {
+  background: #002c56;
+}
+
+/* Only stick side navbar if it can fit */
+@media (min-height: 300px) {
+  .sidenav .gallery-list {
+    position: sticky;
+    top: 0;
+  }
+}
+.gallery-cities article {
+  padding: 2rem;
+  margin: 0 0 2rem 0;
+  display: grid;
+  grid-template-columns: 50vw 20vw;
+  grid-gap: 30px;
+  grid-template-areas: "h3 weather" "p weather" "gallery gallery";
+}
+.gallery-cities article h3 {
+  grid-area: h3;
+}
+.gallery-cities article .description {
+  grid-area: p;
+}
+.gallery-cities article .weather {
+  grid-area: weather;
+  background: rgba(0, 49, 96, 0.4);
+  height: 150px;
+}
+.gallery-cities article .gallery-city {
+  grid-area: gallery;
+  display: flex;
+  flex-wrap: wrap;
+}
+.gallery-cities article .gallery-city img {
+  transition: 0.6s;
+}
+.gallery-cities article .gallery-city img:hover {
+  transform: scale(0.9);
+  opacity: 0.9;
+  cursor: pointer;
+}
+.gallery-cities article .gallery-city img.thumb {
+  width: 300px;
+  height: max-content;
+}
+
+.gallery-cities h2 {
+  font-size: 1.8rem;
+  margin: 2rem;
+}
+
+.overlay-login {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #99adbf;
+  z-index: 1;
+  display: flex;
+}
+.overlay-login input {
+  font-size: 16px;
+  padding: 12px 0 7px 8px;
+  background-color: #fafafa;
+  color: #262626;
+  border: none;
+  outline: none;
+  width: 100%;
+}
+.overlay-login main {
+  background-color: #fff;
+  width: 350px;
+  margin: 40px auto 0;
+  padding: 0 40px;
+  border: 1px solid #e6e6e6;
+  border-radius: 1px;
+}
+.overlay-login form.login {
+  display: flex;
+  flex-direction: column;
+}
+.overlay-login form.login h3 {
+  font-size: 20px;
+  text-align: center;
+  margin: 20px 0;
+}
+.overlay-login form.login label {
+  color: #999;
+  font-size: 14px;
+  height: 36px;
+  line-height: 36px;
+  overflow: hidden;
+  position: absolute;
+  right: 0;
+  left: 8px;
+  -webkit-transform-origin: left;
+  transform-origin: left;
+  -webkit-transition: -webkit-transform ease-out 0.1s;
+  transition: transform ease-out 0.1s;
+  transition: transform ease-out 0.1s, -webkit-transform ease-out 0.1s;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.overlay-login form.login button {
+  background-color: #3897f0;
+  border: 1px solid #3897f0;
+  border-radius: 4px;
+  color: #fff;
+  margin: 10px 0;
+  height: 32px;
+}
+.overlay-login form.login .input-box {
+  position: relative;
+  border: 1px solid #efefef;
+  border-radius: 3px;
+  margin: 5px 0;
+}
+.overlay-login form.login .input-box.active label {
+  -webkit-transform: scale(0.83333) translateY(-10px);
+  transform: scale(0.83333) translateY(-10px);
+  font-size: 12px;
+}
+
+.hidden {
+  display: none;
+}
+
+.overlay-gallery {
+  flex-direction: column;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: black;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
+}
+.overlay-gallery img {
+  max-width: 80%;
+  max-height: 80%;
+}
+.overlay-gallery .image-description {
+  color: #fff;
+  font-size: 2em;
+}
+.overlay-gallery span.close {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 10px;
+  color: #fff;
+  font-size: 30px;
+  font-family: Arial, Helvetica, sans-serif;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.overlay-gallery span.close:hover {
+  transform: scale(1.2) rotate(180deg);
+  color: red;
+}
+.overlay-gallery .arrows {
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  bottom: 10px;
+  font-size: 50px;
+  color: #fff;
+}
+.overlay-gallery .arrows * {
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/*# sourceMappingURL=main.css.map */

@@ -1,0 +1,33 @@
+h1, h2 {
+    span {
+        display: block;
+    }
+}
+
+.heading-login {
+    margin: 4em 2em;
+
+    .heading-login-primary {
+        color: #920000;
+        font-size: 2em;
+        text-transform: uppercase;
+        letter-spacing: 0.5em;
+        }
+
+    .heading-login-secondary {
+        color: #003160;
+    }
+}
+
+.heading-main {
+
+    span {
+        display: block;
+    }
+    
+    .heading-main-primary {
+        font-size: 2em;
+        text-transform: uppercase;
+        letter-spacing: 0.5em;
+    }
+}
